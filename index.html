@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>E-commerce Landing Page</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 40px;
+      }
+
+      header {
+        display: flex;
+        gap: 150px;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .sneakers {
+        object-fit: contain;
+        width: 150px;
+        border: 2px solid black;
+        height: 35px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        list-style: none;
+        margin-bottom: 40px;
+      }
+
+      li > a {
+        text-decoration: none;
+        color: gray;
+        margin-left: 20px;
+      }
+      .nav-item {
+        display: flex;
+        gap: 30px;
+        margin-left: 300px;
+      }
+
+      .cart {
+        height: 24px;
+        margin-top: 10px;
+      }
+      .image-avatar {
+        width: 50px;
+        height: 50px;
+      }
+
+      ul {
+        height: 10px;
+      }
+      .section1 {
+        display: flex;
+        gap: 40px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 1100px;
+        margin: auto;
+        align-items: center;
+      }
+
+      .image-section img {
+        width: 450px;
+        border-radius: 15px;
+      }
+
+      .content-section {
+        max-width: 500px;
+      }
+
+      .brand {
+        color: gray;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .description {
+        color: gray;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .price {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .discount-badge {
+        background-color: black;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        margin-top: 5px;
+        font-weight: 300;
+      }
+
+      .cart-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 25px;
+      }
+
+      .quantity {
+        display: flex;
+        align-items: center;
+        background: #f0f0f0;
+        border-radius: 10px;
+        gap: 20px;
+        padding: 8px 15px;
+      }
+
+      .quantity span {
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      .add-cart {
+        background: #ff7a00;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .add-cart:hover {
+        opacity: 0.9;
+      }
+
+      .images {
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+        margin-left: 90px;
+      }
+
+      .img1:active {
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+
+      .img2:active {
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+
+      .img3:active {
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+
+      .img4:active {
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+
+      .img1 {
+        width: 100px;
+        border-radius: 15px;
+      }
+
+      .img2 {
+        width: 100px;
+        border-radius: 15px;
+      }
+
+      .img3 {
+        width: 100px;
+        border-radius: 15px;
+      }
+
+      .img4 {
+        width: 100px;
+        border-radius: 15px;
+      }
+
+      .span-div {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+      }
+
+      .span-div p {
+        background-color: black;
+        color: white;
+        width: 70px;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 8px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      @media (max-width: 375px) {
+        body {
+          padding: 20px;
+        }
+
+        header {
+          display: flex;
+          gap: 30px;
+          margin-top: 10px;
+          justify-content: space-between;
+        }
+
+        .navbar {
+          gap: 20px;
+          align-items: center;
+        }
+
+        .nav-item {
+          margin: 0;
+          margin-bottom: 40px;
+          margin-top: 40px;
+          margin-left: 90px;
+          gap: 11px;
+        }
+
+        .sneakers {
+          border: none;
+        }
+
+        li {
+          display: none;
+        }
+
+        .image-avatar {
+          width: 35px;
+          height: 35px;
+        }
+
+        .section1 {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .image-section img {
+          width: 100%;
+        }
+
+        .content-section {
+          max-width: 100%;
+        }
+
+        .title {
+          font-size: 24px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .span-div {
+          align-items: center;
+        }
+
+        .span-div p {
+          width: 50px;
+          font-size: 16px;
+          padding-top: 5px;
+        }
+
+        .old-price {
+          font-size: 14px;
+        }
+
+        .cart-section {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .quantity {
+          justify-content: space-between;
+        }
+
+        .add-cart {
+          width: 100%;
+          padding: 15px;
+        }
+
+        .images {
+          margin-left: 0;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+          width: 75px;
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <ul>
+            <img src="images/logo.svg" alt="Sneakers" class="sneakers" />
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+
+            <div class="nav-item">
+              <img src="images/icon-cart.svg" alt="cart" class="cart" />
+              <img
+                src="images/image-avatar.png"
+                alt="image-avatar"
+                class="image-avatar"
+              />
+            </div>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section class="section1">
+      <div class="image-section">
+        <img src="images/image-product-1.jpg" alt="Sneakers" />
+      </div>
+
+      <div class="content-section">
+        <div class="brand">Sneaker Company</div>
+
+        <div class="title">
+          Fall Limited Edition <br />
+          Sneakers
+        </div>
+
+        <div class="description">
+          These low-profile sneakers are your perfect <br />
+          casual wear companion. Featuring a durable <br />rubber outer sole,
+          they'll withstand everything <br />
+          the weather can offer.
+        </div>
+
+        <div class="span-div">
+          <h1>$125.00</h1>
+          <p>50%</p>
+        </div>
+
+        <div class="old-price">$250.00</div>
+
+        <div class="cart-section">
+          <div class="quantity">
+            <img src="images/icon-minus.svg" />
+            <span>0</span>
+            <img src="images/icon-plus.svg" />
+          </div>
+
+          <button class="add-cart">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2">
+      <div class="images">
+        <img src="images/image-product-1.jpg" class="img1" />
+        <img src="images/image-product-2.jpg" class="img2" />
+        <img src="images/image-product-3.jpg" class="img3" />
+        <img src="images/image-product-4.jpg" class="img4" />
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Luke Chidinma</a>.
+    </div>
+  </body>
+</html>
